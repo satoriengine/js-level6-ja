@@ -3,7 +3,7 @@
 import fs from 'node:fs';
 
 // 読み込むファイル名
-const fileName = 'data3.txt';
+const fileName = './data/data03.txt';
 // 文字コード
 const characterCode = 'utf8';
 

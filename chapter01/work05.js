@@ -3,7 +3,7 @@
 import fs from 'node:fs';
 
 // 書き込むファイル名
-const fileName = 'data5.txt';
+const fileName = './data/data05.txt';
 // 文字コード
 const characterCode = 'utf8';
 // 書き込む文字列

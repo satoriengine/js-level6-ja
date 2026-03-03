@@ -1,9 +1,9 @@
-// 非同期処理によるファイル書き込み
+// 配列を書き込む
 // fsのインポート
 import fs from 'node:fs';
 
 // 書き込むファイル名
-const fileName = 'data7.txt';
+const fileName = './data/data07.txt';
 // 文字コード
 const characterCode = 'utf8';
 // 書き込む配列
