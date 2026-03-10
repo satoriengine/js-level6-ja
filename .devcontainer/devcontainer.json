@@ -1,0 +1,52 @@
+{
+  "name": "node-devcontainer",
+  "image": "mcr.microsoft.com/devcontainers/base:ubuntu",
+  "features": {
+    // nodejs
+    "ghcr.io/devcontainers/features/node:1": {
+      "version": "latest"
+    },
+    // python
+    "ghcr.io/devcontainers/features/python:1": {
+      "version": "latest"
+    },
+    // utils
+    "ghcr.io/devcontainers/features/common-utils:2": {
+      "upgradePackages": true,
+      "username": "vscode",
+      "userUid": "automatic",
+      "userGid": "automatic"
+    },
+    "ghcr.io/rocker-org/devcontainer-features/apt-packages:1": {
+      "packages": "curl,wget,git,jq,ca-certificates,build-essential"
+    },
+  },
+  "postCreateCommand": "/bin/sh .devcontainer/postCreateCommand.sh",
+  "postStartCommand": "/bin/sh .devcontainer/postStartCommand.sh",
+  "customizations": {
+    "vscode": {
+      "settings": {
+      },
+      "extensions": [
+        // material file icon theme
+        "pkief.material-icon-theme",
+        // Integrates ESLint JavaScript into VS Code.
+        "dbaeumer.vscode-eslint",
+        // spell checker
+        "streetsidesoftware.code-spell-checker",
+        // formatter
+        "esbenp.prettier-vscode",
+        // visible indent
+        "oderwat.indent-rainbow",
+        // auto tag rename
+        "formulahendry.auto-rename-tag",
+        // markdown edit
+        "yzhang.markdown-all-in-one",
+        // markdown enhance
+        "shd101wyy.markdown-preview-enhanced",
+        // zenkaku highlight
+        "mosapride.zenkaku"
+      ]
+    }
+  }
+}
