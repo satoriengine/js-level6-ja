@@ -6,7 +6,7 @@ async function getValue(message) {
     return message;
 }
 
-// 関数を呼び出すが、戻り値はPromiseオブジェクト
+// 関数を呼び出す。thenで処理をつなぐ
 getValue('3:こんにちは').then((data) => {
     console.log(data);
 });

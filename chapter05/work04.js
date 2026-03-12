@@ -2,32 +2,22 @@
 console.log('1:処理の開始');
 
 // Promiseオブジェクトを返すasync関数
-// secondsミリ秒待機後、messageを表示します
 async function getValue(seconds, message) {
+    // awaitで非同期処理が完了するまで待機します
+    // secondsミリ秒待機後、resolveします
     const result = await new Promise((resolve, reject) => {
         setTimeout(() => {
             resolve(message);
         }, seconds);
     });
+    // 変数resultの実体はmessage
     return result;
 }
 
 // 関数を呼び出す。戻り値はPromiseオブジェクト
-getValue(1000, '3:こんにちは')
-    .then((data) => {
-        console.log(data);
-        return getValue(1000, '4:こんにちは');
-    })
-    .then((data) => {
-        console.log(data);
-        return getValue(1000, '5:こんにちは');
-    })
-    .then((data) => {
-        console.log(data);
-        return getValue(1000, '6:こんにちは');
-    })
-    .then((data) => {
-        console.log(data);
-    });
+// thenで連結します
+getValue(1000, '3:こんにちは').then((data) => {
+    console.log(data);
+});
 
 console.log('2:プログラムの最後');

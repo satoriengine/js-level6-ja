@@ -6,7 +6,7 @@ async function getValue() {
     return '4:こんにちは';
 }
 
-// 関数を呼び出すが、戻り値はPromiseオブジェクト
+// 関数を呼び出す。戻り値はPromiseオブジェクト
 const promise = getValue();
 
 // thenで処理をつなぐ

@@ -1,50 +1,36 @@
-// async/await/fetch/sleep
+// await演算子と待機処理
 
 // アクセスするURL
 const url = 'https://satori-api.vercel.app/hello';
 
 console.log('1:処理の開始');
 
-// secondsミリ秒待機するasync関数
-async function sleep(seconds) {
-    return await new Promise((resolve, reject) => {
+// secondsミリ秒待機後、resolveします
+function sleep(seconds) {
+    return new Promise((resolve, reject) => {
         setTimeout(resolve, seconds);
     });
 }
 
 // Promiseオブジェクトを返すasync関数
 async function getValue(url, seconds) {
-    // URLにアクセスしてデータを取得
+    // awaitで非同期処理が完了するまで待機します
     const response = await fetch(url);
-    // データを取得
+    // awaitで非同期処理が完了するまで待機します
     const data = await response.text();
+    // titleタグの文字列を抽出します
     const title = data.match('<title[^>]*>([^<]+)</title>')[1];
-    // secondsミリ秒待機する
+    // awaitで非同期処理が完了するまで待機します
     await sleep(seconds);
-    // 文字列を返します
+    // titleタグの文字列を返します
     return title;
 }
 
-// 関数を呼び出すが、戻り値はPromiseオブジェクト
-getValue(url, 1000)
-    .then((data) => {
-        console.log('3:データの取得');
-        console.log(data);
-        return getValue(url, 1000);
-    })
-    .then((data) => {
-        console.log('4:データの取得');
-        console.log(data);
-        return getValue(url, 1000);
-    })
-    .then((data) => {
-        console.log('5:データの取得');
-        console.log(data);
-        return getValue(url, 1000);
-    })
-    .then((data) => {
-        console.log('6:データの取得');
-        console.log(data);
-    });
+// 関数を呼び出す。戻り値はPromiseオブジェクト
+// thenで連結します
+getValue(url, 1000).then((data) => {
+    console.log('3:データの取得');
+    console.log(data);
+});
 
 console.log('2:プログラムの最後');
