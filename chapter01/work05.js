@@ -12,12 +12,3 @@ const text = 'Hello, I am Bob';
 console.log('1:処理開始');
 
 // ファイルを非同期で書き込む
-fs.writeFile(fileName, text, characterCode, function (error) {
-    // 何らかのエラーの場合
-    if (error) {
-        throw error;
-    }
-    console.log('3:処理終了');
-});
-
-console.log('2:プログラムの最後');

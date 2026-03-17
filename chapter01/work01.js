@@ -8,11 +8,3 @@ const fileName = './data/data01.txt';
 const characterCode = 'utf8';
 
 // ファイルを非同期で読み込む
-fs.readFile(fileName, characterCode, function (error, data) {
-    // 何らかのエラーの場合
-    if (error) {
-        throw error;
-    }
-    // ファイルデータの表示
-    console.log(data);
-});

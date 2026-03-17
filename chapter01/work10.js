@@ -43,10 +43,5 @@ const colors = ['Guitar', 'Piano', 'Violin', 'Drums'];
 
 // 以下の部分に処理を作成します
 // 配列の要素を改行で連結した文字列にします
-const text = colors.join('\n');
+
 // 非同期でファイルに書き込みます
-fs.writeFile(fileName, text, characterCode, function (error) {
-    if (error) {
-        throw error;
-    }
-});

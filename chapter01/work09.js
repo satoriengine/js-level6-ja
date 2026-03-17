@@ -36,10 +36,3 @@ const characterCode = 'utf8';
 // 以下の部分に処理を作成します
 // 非同期でファイルを読み込みます
 // 読み込んだデータを配列に変換して表示します
-fs.readFile(fileName, characterCode, function (error, data) {
-    if (error) {
-        throw error;
-    }
-    const nations = data.trim().split('\n');
-    console.log(nations);
-});

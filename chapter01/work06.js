@@ -12,6 +12,3 @@ const text = 'My name is Alice';
 console.log('1:処理開始');
 
 // ファイルを同期で書き込む
-fs.writeFileSync(fileName, text, characterCode);
-
-console.log('2:プログラムの最後');

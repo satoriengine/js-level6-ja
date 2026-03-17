@@ -38,9 +38,3 @@ const characterCode = 'utf8';
 
 // 以下の部分に処理を作成します
 // 非同期でファイルを読み込んで表示します
-fs.readFile(fileName, characterCode, function (error, data) {
-    if (error) {
-        throw error;
-    }
-    console.log(data);
-});

@@ -10,8 +10,3 @@ const characterCode = 'utf8';
 console.log('1:処理開始');
 
 // ファイルを同期で読み込む
-const data = fs.readFileSync(fileName, characterCode);
-// ファイルデータの表示
-console.log(data);
-
-console.log('2:プログラムの最後');
