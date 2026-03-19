@@ -21,13 +21,3 @@ setIntervalを使用して、5から0まで1秒ごとに
 << 1秒待機 >>
 0
 */
-
-let count = 5;
-
-const timer = setInterval(function () {
-    console.log(count);
-    count--;
-    if (count < 0) {
-        clearInterval(timer);
-    }
-}, 1000);

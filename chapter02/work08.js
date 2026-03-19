@@ -11,7 +11,3 @@ setTimeoutを使用して、プログラムを実行してから2秒後に
 Hello
 
 */
-
-setTimeout(function () {
-    console.log('Hello');
-}, 2000);
