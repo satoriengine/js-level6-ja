@@ -11,19 +11,3 @@ const sleep = (seconds, callback) => {
         }, seconds);
     });
 };
-
-Promise.all([
-    sleep(1000, () => {
-        return '3:こんにちは';
-    }),
-    sleep(2000, () => {
-        return '4:こんにちは';
-    }),
-    sleep(3000, () => {
-        return '5:こんにちは';
-    }),
-]).then((data) => {
-    console.log(data);
-});
-
-console.log('2:プログラムの最後');

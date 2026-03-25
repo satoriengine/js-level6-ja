@@ -43,19 +43,3 @@ const cook = (seconds, taskName) => {
 };
 
 console.log('料理を開始します');
-
-// 野菜を切るとお湯を沸かすを「並行」して行う
-Promise.all([cook(1000, '野菜を切る'), cook(2000, 'お湯を沸かす')])
-    .then((data) => {
-        // 両方の完了メッセージが入った配列を表示します
-        console.log(data);
-        // 両方終わったら「材料を煮込む」を開始します
-        return cook(3000, '材料を煮込む');
-    })
-    .then((data) => {
-        console.log(data);
-        console.log('料理が完成しました');
-    })
-    .catch(() => {
-        console.error('料理作成失敗');
-    });
