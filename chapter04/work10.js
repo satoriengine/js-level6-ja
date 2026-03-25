@@ -66,14 +66,3 @@ const myFetchAndSleep = (url, seconds) => {
             });
     });
 };
-
-myFetchAndSleep(url, 2000)
-    .then(() => {
-        return myFetchAndSleep(url, 2000);
-    })
-    .then(() => {
-        return myFetchAndSleep(url, 2000);
-    })
-    .then(() => {
-        console.log('終了');
-    });

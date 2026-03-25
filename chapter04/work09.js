@@ -49,11 +49,3 @@ URL: https://satori-api.vercel.app/songs
 
 // アクセスするURL
 const url = 'https://satori-api.vercel.app/songs';
-
-fetch(url)
-    .then((response) => {
-        return response.json();
-    })
-    .then((json) => {
-        console.log(json);
-    });

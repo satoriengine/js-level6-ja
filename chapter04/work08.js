@@ -30,11 +30,3 @@ URL: https://satori-api.vercel.app/fruits
 const url = 'https://satori-api.vercel.app/fruits';
 
 // fetchを利用してURLにアクセスしてデータ取得
-fetch(url)
-    .then((response) => {
-        return response.text();
-    })
-    .then((data) => {
-        const fruits = data.split('/');
-        console.log(fruits);
-    });
