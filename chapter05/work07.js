@@ -29,8 +29,3 @@ async function getValue(url, seconds) {
 // 関数を呼び出す。戻り値はPromiseオブジェクト
 // awaitで非同期処理が完了するまで待機します
 // awaitでの待機完了後、戻り値はタイトルタグの文字列になります
-const data = await getValue(url, 1000);
-console.log('2:データの取得');
-console.log(data);
-
-console.log('3:プログラムの最後');
