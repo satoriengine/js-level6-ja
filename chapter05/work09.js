@@ -23,11 +23,3 @@ async function getValue(url, seconds) {
 }
 
 // 繰り返し処理でawaitする
-for (const url of sites) {
-    // awaitで非同期処理が完了するまで待機します
-    // awaitでの待機完了後、戻り値はタイトルタグの文字列になります
-    const title = await getValue(url, 1000);
-    console.log(title);
-}
-
-console.log('2:プログラムの最後');
