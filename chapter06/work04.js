@@ -51,7 +51,3 @@ function myFetch(url) {
 // 通信処理関数myFetchを呼び出します
 // 引数でurlを渡します。戻り値はPromiseオブジェクトです
 // thenメソッドで処理を連結します
-myFetch(url).then((data) => {
-    console.log(data);
-    console.log('通信処理終了');
-});

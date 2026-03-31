@@ -23,11 +23,3 @@ setIntervalを使用して、5から10まで1秒ごとに
 */
 
 let count = 5;
-
-const timer = setInterval(function () {
-    console.log(count);
-    count++;
-    if (count > 10) {
-        clearInterval(timer);
-    }
-}, 1000);

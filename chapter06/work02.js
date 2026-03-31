@@ -10,7 +10,3 @@ setTimeoutを使用して、プログラムを実行してから1秒後に
 << 1秒待機 >>
 Hello, Bob
 */
-
-setTimeout(function () {
-    console.log('Hello, Bob');
-}, 1000);

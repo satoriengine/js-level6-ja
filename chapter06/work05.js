@@ -46,5 +46,3 @@ async function myFetch(url) {
 // 引数でurlを渡します。戻り値はPromiseオブジェクトです
 // awaitで非同期処理が完了するまで待機します
 // 戻り値を表示します
-const title = await myFetch(url);
-console.log(title);
