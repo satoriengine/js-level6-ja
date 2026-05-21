@@ -1,5 +1,5 @@
 {
-    "workbench.colorTheme": "Default Dark Modern",
+    "workbench.colorTheme": "Dark+",
     "workbench.iconTheme": "material-icon-theme",
     "editor.codeActionsOnSave": {
         "source.addMissingImports": "explicit",
@@ -32,9 +32,9 @@
     "search.exclude": {
         "**/node_modules": true
     },
-    "eslint.options": {
-        "overrideConfigFile": "eslint.config.js"
-    },
+    // "eslint.options": {
+    //     "overrideConfigFile": "eslint.config.js"
+    // },
     "[javascript]": {
         "editor.defaultFormatter": "esbenp.prettier-vscode"
     },
