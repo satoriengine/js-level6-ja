@@ -3,7 +3,16 @@
   "ignorePaths": [],
   "dictionaryDefinitions": [],
   "dictionaries": [],
-  "words": [],
+  "words": [
+    "dbaeumer",
+    "esbenp",
+    "formulahendry",
+    "mosapride",
+    "oderwat",
+    "pkief",
+    "yzhang",
+    "zenkaku"
+  ],
   "ignoreWords": [],
   "import": []
 }
