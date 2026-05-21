@@ -1,28 +1,7 @@
 {
-  "name": "node-devcontainer",
-  "image": "mcr.microsoft.com/devcontainers/base:ubuntu",
-  "features": {
-    // nodejs
-    "ghcr.io/devcontainers/features/node:1": {
-      "version": "latest"
-    },
-    // python
-    "ghcr.io/devcontainers/features/python:1": {
-      "version": "latest"
-    },
-    // utils
-    "ghcr.io/devcontainers/features/common-utils:2": {
-      "upgradePackages": true,
-      "username": "vscode",
-      "userUid": "automatic",
-      "userGid": "automatic"
-    },
-    "ghcr.io/rocker-org/devcontainer-features/apt-packages:1": {
-      "packages": "curl,wget,git,jq,ca-certificates,build-essential"
-    },
-  },
-  "postCreateCommand": "/bin/sh .devcontainer/postCreateCommand.sh",
-  "postStartCommand": "/bin/sh .devcontainer/postStartCommand.sh",
+  "name": "my-devcontainer",
+  // use universal default linux image version 5 as of May 2026
+  "image": "mcr.microsoft.com/devcontainers/universal:5",
   "customizations": {
     "vscode": {
       "settings": {
